@@ -1,12 +1,7 @@
 import Header from './components/Header'
+import WayToTeach from './components/WayToTeach'
 import { ways } from './data'
-function WayToTeach(props){
-  <li>
-    <p>
-      <strong>Горьковский автомобильный завод -</strong> советское и российское крупное автомобилестроительное предприятие, расположенное в Нижнем Новгороде (с 1932 по 1990 год назывался Горьким.)
-    </p>
-  </li>
-}
+import Button from './components/Button'
 
 export default function App() {
   return (
@@ -34,11 +29,20 @@ export default function App() {
             </li>
             <li>
               <p>
-                <WayToTeach title="111" description="222"/>
-                <WayToTeach title="333" description="444"/>
-              </p>
+                <WayToTeach 
+                title={ways[0].title} 
+                description = {ways[0].description}/>
+                <WayToTeach { ...ways[1]} />
+                <WayToTeach { ...ways[2]} />
+                <WayToTeach { ...ways[3]} />
+              </p>  
             </li>
           </ul>
+        </section>
+        <section>
+          <h3>Чем мы отличаемся от других</h3>
+
+          <Button />
         </section>
       </main>
     </div>

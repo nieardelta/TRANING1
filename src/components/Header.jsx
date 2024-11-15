@@ -7,6 +7,7 @@ export default function Header() {
     return (
       <header>
         <img src={logo} alt={'Delta'} />
+        
           {/*<h3>NierDeltaSite</h3>*/}
   
           <span>Время сейчас: { now.toLocaleTimeString() }</span>
