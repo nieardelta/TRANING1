@@ -4,6 +4,10 @@ import { ways } from './data'
 import Button from './components/Button/Button'
 
 export default function App() {
+  function handleClick(type) {
+    console.log('button clicked', type)
+
+  }
   return (
     <div>
       <Header />
@@ -42,9 +46,9 @@ export default function App() {
         <section>
           <h3>Чем мы отличаемся от других</h3>
 
-          <Button>Подход</Button>
-          <Button>Доступность</Button>
-          <Button>Концентрация</Button>
+          <Button onClick={() => handleClick('way')}>Подход</Button>
+          <Button onClick={() =>handleClick('easy')}>Доступность</Button>
+          <Button onClick={() =>handleClick('program')}>Концентрация</Button>
         </section>
       </main>
     </div>
