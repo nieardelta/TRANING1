@@ -1,6 +1,6 @@
 import Header from './components/Header'
 import WayToTeach from './components/WayToTeach'
-import { ways } from './data'
+import { ways,differences  } from './data'
 import Button from './components/Button/Button'
 import { useState } from 'react' 
 
@@ -8,13 +8,12 @@ export default function App() {
 const [ content, setContent ] = useState('Нажми на кнопку')
 
 
-
+console.log('App render')
   //let content = 'Нажми на кнопку'
 
-console.log('App Component Render')
-
   function handleClick(type) {
-    console.log('button clicked', type)
+    setContent(type)
+    console.log(content)
     // content = type
   }
   return (
@@ -59,7 +58,7 @@ console.log('App Component Render')
           <Button onClick={() =>handleClick('easy')}>Доступность</Button>
           <Button onClick={() =>handleClick('program')}>Концентрация</Button>
 
-        <p>{content}</p>  
+        <p>{differences[content]}</p>  
         </section>
       </main>
     </div>
