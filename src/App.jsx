@@ -2,13 +2,20 @@ import Header from './components/Header'
 import WayToTeach from './components/WayToTeach'
 import { ways } from './data'
 import Button from './components/Button/Button'
+import { useState } from 'react' 
 
 export default function App() {
-  let content = 'Нажми на кнопку'
+const [ content, setContent ] = useState('Нажми на кнопку')
+
+
+
+  //let content = 'Нажми на кнопку'
+
+console.log('App Component Render')
 
   function handleClick(type) {
     console.log('button clicked', type)
-    content = type
+    // content = type
   }
   return (
     <div>
