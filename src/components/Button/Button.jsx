@@ -1,5 +1,14 @@
 import './Button.css'
 
 export default function Button({children}) {
-    return <button className='button'>{children}</button>
+function handleClick() {
+     console.log('button clicked')
+}
+    return <button 
+        className='button' 
+        onClick={handleClick} 
+        onDoubleClick={() => console.log('dbl')}
+        >
+        {children} 
+    </button>
 }
