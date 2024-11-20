@@ -51,9 +51,18 @@ const [ contentType, setContentType ] = useState(null)
         <section>
           <h3>Чем мы отличаемся от других</h3>
 
-          <Button onClick={() => handleClick('way')}>Подход</Button>
-          <Button onClick={() =>handleClick('easy')}>Доступность</Button>
-          <Button onClick={() =>handleClick('program')}>Концентрация</Button>
+          <Button isActive={contentType==='way'}
+          onClick={() => handleClick('way')}>
+            Подход
+          </Button>
+          <Button isActive={contentType==='easy'}
+          onClick={() =>handleClick('easy')}>
+            Доступность
+          </Button>
+          <Button isActive={contentType==='program'}
+          onClick={() =>handleClick('program')}>
+          Концентрация
+          </Button>
 
         {/* contentType ? (
           <p>{differences[contentType]}</p>
@@ -68,7 +77,7 @@ const [ contentType, setContentType ] = useState(null)
         {contentType && <p>{differences[contentType]}</p>}
 
 
-        
+
         </section>
       </main>
     </div>
