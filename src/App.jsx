@@ -55,11 +55,20 @@ const [ contentType, setContentType ] = useState(null)
           <Button onClick={() =>handleClick('easy')}>Доступность</Button>
           <Button onClick={() =>handleClick('program')}>Концентрация</Button>
 
-        { contentType ? (
+        {/* contentType ? (
           <p>{differences[contentType]}</p>
           ) : (
-          <div>Нажми на кнопку</div>
-          ) }
+          <p>Нажми на кнопку</p>
+          ) */}
+        
+        {/* !contentType ? <p>Нажми на кнопку</p> : null }
+        {contentType ? <p>{differences[contentType]}</p> : null*/}
+
+        {!contentType && <p>Нажми на кнопку</p>}
+        {contentType && <p>{differences[contentType]}</p>}
+
+
+        
         </section>
       </main>
     </div>
